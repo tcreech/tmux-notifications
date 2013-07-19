@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+STORE=~/.tmux-notify
+if test -e $STORE; then
+   rm $STORE
+   touch $STORE
+fi
+

@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+STORE=~/.tmux-notify
+if test -e $STORE; then
+   COUNT=$(( $(wc -l $STORE | awk '{ print $1 }') ))
+
+   if (( $COUNT > 0 )); then
+      echo "[$COUNT]"
+   fi
+fi
+

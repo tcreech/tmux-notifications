@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+STORE=~/.tmux-notify
+
+NOTIFICATION="[$(date +"%D %I:%M%p")] $*"
+echo $NOTIFICATION >> $STORE
+tput bel
+
+tmux source-file ~/.tmux.conf
+tmux refresh-client -S
+
